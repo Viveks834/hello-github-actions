@@ -1,0 +1,13 @@
+name: Print Name Workflow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  print-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Repository Name
+        run: echo "The repository name is ${{ github.repository }}"
